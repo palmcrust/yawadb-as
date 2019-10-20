@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YawADB</string>
+    <string name="toggleDescription">Current Mode</string>
+	
+	<string name="enabled">enabled</string> 	
+	<string name="disabled">disabled</string> 	
+    
+    
+    <string name="actConfig">Configure</string>
+    <string name="actInfo">Information</string>
+    <string name="actStatUp" formatted="false">To use wireless ADB:\n%s</string>
+    <string name="actStatDown">Wireless ADB is OFF</string>
+    <string name="actNoAdbd">ADB daemon NOT running</string>
+    <string name="actNoNetwork">No wireless networks</string>
+    <string name="actUndefined">Undefined</string>
+    
+    <string name="actEnable">Enable wireless ADB</string>
+    <string name="actDisable">Disable wireless ADB</string>
+
+    <!-- Options -->	
+	<string name="configTitle">YawADB Configuration</string>
+	
+	<string name="optPortNumber">Port number</string> 
+	<string name="optAutoRefresh">Auto-refresh</string> 
+	<string name="optAutoUsb">Auto-USB</string> 
+	<string name="optShellPath">SU path</string> 
+	<string name="optAdbdRestart">ADBD restart</string>
+	<string name="optReset">Reset to default</string> 
+	
+	<string name="optPathError">%s path is invalid</string> 
+		
+	<!-- Auto-refresh option alternatives -->	
+	<string name="refrNever">disabled</string>
+	<string name="refr3sec">3 sec</string>
+	<string name="refr20sec">20 sec</string>
+	<string name="refr1min">1 min</string>
+	<string name="refr10min">10 min</string>
+	<string name="refr30min">30 min</string>
+	
+	<string name="adbdRestartNormal">normal</string>
+	<string name="adbdRestartForced">forced</string> 
+
+    <string name="msgSrvcStrtFail">Failed to start service</string>
+	<string name="msgRefreshing">Refreshing&#8230;</string>
+	<string name="msgCouldntExecute">FAILED. Is device rooted?</string>
+	<string name="msgPortNumberError">Please, set port number between 1024 and 65535</string> 
+	<string name="msgInvalidPath" formatted="false">"Path \'%s\' does not match an executable file</string>
+	<string name="msgInvalidIfaceName">Network \'%s\' is not present, or disabled</string> 
+	<string name="msgResetToDefault">Options have been reset to default</string>
+	
+	
+	<!-- Information -->	
+	<string name="infoTitle" formatted="false">%s Information</string>
+	<string name="infoHowTo">How To</string>
+	<string name="infoLicense">License</string>
+	<string name="infoVersion" formatted="false">Version %s</string>
+	<string name="infoPathLicense">gpl3.html</string>
+	<string name="infoPathHowTo">default/howto.html</string>
+						
+</resources>

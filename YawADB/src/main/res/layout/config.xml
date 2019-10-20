@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/confWidth"
+    android:layout_height="wrap_content"
+    android:background="@color/paneBkgr"
+    android:orientation="vertical" >
+	<TextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:gravity="center"	    
+	    android:text="@string/configTitle"
+	    android:textColor="@color/titleConfigTxt"
+  		android:background="@color/itemConfigBkgr"
+  		android:textSize="@dimen/confTitleTxtSize"
+  		android:textStyle="bold"/>
+	    	   
+    <include android:id="@+id/optPortNumber" layout="@layout/edit_box"/> 
+    <include android:id="@+id/optAutoRefresh" layout="@layout/choice_box"/> 
+	<include android:id="@+id/optAutoUsb" layout="@layout/choice_box"/>    
+   	<include android:id="@+id/optShellPath" layout="@layout/edit_box"/>    
+	<include android:id="@+id/optAdbRestart" layout="@layout/choice_box"/>    
+	
+	<TextView
+	    android:id="@+id/reset"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+		android:gravity="center"	    
+	    android:text="@string/optReset"
+	    android:textColor="@color/item_reset_txt"
+  		android:background="@color/itemConfigBkgr"
+  		android:textSize="@dimen/confTitleTxtSize"
+  		android:textStyle="bold"
+  		android:clickable="true"
+  		android:focusable="true" />
+	
+</LinearLayout>

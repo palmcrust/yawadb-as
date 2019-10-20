@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+   	android:layout_marginTop="2dp"
+   	android:layout_marginBottom="2dp"
+	android:paddingLeft="@dimen/configPaddingHorz"
+	android:paddingRight="@dimen/configPaddingHorz"
+	android:paddingTop="@dimen/configPaddingVert"
+	android:paddingBottom="@dimen/configPaddingVert"
+	android:background="@color/boxBkgr"
+    android:orientation="horizontal" >
+    
+    <TextView
+        android:id="@+id/boxTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingRight="2dp"
+        android:gravity="center_vertical"
+		android:textSize="@dimen/boxTitleTxtSizeNarrow"    
+		android:textStyle="bold|italic"
+		android:clickable="false"
+	/>    
+    
+    <TextView
+        android:id="@+id/boxValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginLeft="6dp"        
+        android:layout_gravity="right|center_vertical"
+        android:gravity="right|center_vertical"
+		android:textSize="@dimen/boxValueTxtSizeNarrow"    
+		android:textStyle="bold"
+		android:textColor="@color/box_value_txt"
+		android:focusable="true"
+		android:clickable="true"
+	/>    
+    
+</LinearLayout>

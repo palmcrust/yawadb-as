@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="itemEnabledBkgr">#084</color> 
+   <color name="itemDisabledBkgr">#800</color> 
+   <color name="itemConfigBkgr">#000</color>
+   <color name="titleConfigTxt">#ff8</color>
+   <color name="itemFocusedTxt">#ff0</color>
+   <color name="itemPressedTxt">#f0f</color>
+   <color name="itemTxt">#fff</color>
+   <color name="boxBkgr">#000</color>
+   <color name="boxValueHint">#884</color>
+   <color name="paneBkgr">#888</color>
+   <color name="strokeCrnt">#244</color>
+   <color name="strokeOther">#666</color>
+   <color name="btnBkgr">#666</color>
+</resources>

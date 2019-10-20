@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<title>YawADB How To</title>
+<style>
+ 	body {padding: 6px;}
+ 	h1 {font-size:1.75em; text-align:center;}
+ 	h2 {font-size:1.5em;}
+ 	p, li {text-align: justify; }
+ 	tt {font-size:1em; font-family:"monospace";}
+ 	}
+ </style>
+</head>
+<body>
+<h1>HOW TO</h1>
+<h2>Why YawADB?</h2>
+<p>Despite a variety of similar app&shy;lica&shy;tions, we decided to develop
+another one to better suit our needs.
+Since all appropriate names have been used,
+we couldn't come up with anything better than
+<i>'Yet Another Wireless ADB application'</i>, or YawADB for short. In expectation
+that this application can be useful for someone else we release it under GPL.
+The source code can be obtained from the project page at GitHub:
+<a href="https://github.com/palmcrust/yawadb">https://github.com/palmcrust/yawadb</a>.</p>
+ 
+ <p>YawADB configures a rooted Android device for wireless access through Android Debug Bridge (ADB) without using USB cable connection.
+It can be launched either as an app (backward compatible up to API 1),
+ or as a widget (compatible up to API 3, the first release featuring applications widgets).
+</p>
+ 
+ <p>YawADB is designed to be self aware and keep the information current.
+ It can be configured to periodically re-check the status, but even if the refresh
+ is disabled or infrequent, the application still tries its best
+ to bring up-to-time feedback.</p>
+ 
+<p>The application provides a number of customised features for someone who likes
+experimenting and know what they are doing.</p>    
+ 
+ <p>Being not authorised to translate GPL text to other languages,
+ we  for consistency decided to leave the other text untranslated too.
+ <i>SVP, ent&shy;schul&shy;digen Sie-nous per queste molestias.</i> Another
+ reason for such a decision is that a widget must be installed in device internal memory where the size is often crucial.
+ Since the text is not hard-coded, support for another language can be easily added.</p>   
+ 
+ <p>Email address for comments and suggestions (but definitely not for spam!):
+ <a href="mailto:palmcrust@gmail.com">palmcrust@gmail.com</a>.</p>
+
+<h2>Configuration Options</h2>
+<p><b><u>Port number</u></b>. Specifies port to use for connection. Use default value <tt>5555</tt>,
+unless it clashes with another application. If another port number is needed,
+it is recommended to avoid ports 5554, 5556, 5558 .. used by ADB for console connections.</p>
+
+<p><b><u>Auto-refresh</u></b> (widget mode only). If auto-refresh is enabled, the widget re-checks
+the status of ADB daemon in the specified interval of time. If disabled (default value),
+the status is re-checked only on connectivity change (such as lost/regained connection,
+or airplane mode), when YawADB icon is tapped, or after enable/disable wireless connection <i>using YawADB</i>.
+Auto-refresh is recommended when there are several applications
+changing wireless ADB status, or ADB daemon is unstable on your device
+(a rather unlikely possibility).</p>
+
+<p><b><u>Auto-USB</u></b> (widget mode only). If the option is enabled,
+every time the wireless connection is lost, the ABD daemon is restarted in USB mode,
+which makes the device accessible through USB connection.</p>
+
+<p>The default mode is <i>disabled</i>, in which case the daemon is not restarted automatically.
+To enable USB con&shy;nec&shy;tion you must select <i>'Disable wireless ADB'</i> from the YawADB menu.
+If you don't do that, and the daemon continues running in wireless (TCP/IP) mode,
+the wireless ADB connection automatically becomes available when network re-appears,
+you only need to re-enter <tt>adb connect ...</tt> for accessing the device.</p>         
+
+<p><b><u>SU path</u></b>. The path of <tt>su</tt> program (e.g. <tt>/system/bin/su</tt>). If the full path
+is not specified, the directory should be listed in PATH environment variable.</p>
+
+<p>If your device is rooted only for ADB, you may still succeed in running YawADB. 
+For example, you may create a <i>suid-rooted</i> copy of <tt>/system/bin/sh</tt>
+(please, don't ask to go into the details!) and set this  copy as
+<tt>SU Path</tt> for YawADB. <i>Be aware that this makes your device unsafe
+by allowing to execute rooted commands without any notification!</i>
+For that reason using a rooted device is certainly a preferred option.</p>
+     
+<p><b><u>ADBD restart</u></b>. In order to accept the new mode, ADB daemon should be restarted. In <i>normal</i>
+mode (default) the daemon is stopped using <tt>stop adbd</tt> command, which may fail, if the daemon is busy or stalled.
+In <i>forced</i> mode the daemon is terminated by sending SIGKILL to its PID. It almost guarantees the daemon to
+stop, but precludes it from performing clean-up. Use it with care.</p>      
+    
+<h2>Troubleshooting</h2>
+
+<p><b><u>After installation YawADB icon appears among the applications, but not among the widgets.</u></b>.</p>
+
+<p>Restart the device. The widget will be recognised, and you will not have the problem again.</p>   
+
+<p><b><u>YawADB icon is green, but ADB client does not see the device</u></b>.</p>
+<p>Assuming the computer is connected to the network and not behind a firewall,
+entering</p>
+<pre>
+  adb disconnect
+  adb connect ...
+</pre>
+<p>will do the trick.</p>
+
+
+<p><b><u>YawADB icon is red, but ADB does not recognise the device, con&shy;nec&shy;ted to USB</u></b>.</p>
+
+<p>If the wireless network is unavailable and <i>Auto-USB</i> is disabled, you may need
+to manually restart the daemon. To do that tap the YawADB icon. If <i>Disable wireless ADB</i>
+option is listed, select it, and it should disappear.</p>
+
+<p>If the problem persists, when wireless ADB mode is disabled, 
+disconnect the device and re-connect it. Alternatively you can restart the ADB server using</p>
+<pre>
+  adb kill-server
+  adb start-server
+</pre>
+
+</body>
+
+</html>

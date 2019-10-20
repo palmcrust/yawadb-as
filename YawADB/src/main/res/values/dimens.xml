@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="listPadding">4dp</dimen>    
+    <dimen name="widgetMargin">8dp</dimen>    
+    <dimen name="btnSize">30dp</dimen>
+    <dimen name="listStatTxtSize">18dp</dimen>
+    <dimen name="listActnTxtSize">20dp</dimen>
+    
+    <dimen name="confWidthNarrow">220dp</dimen>
+    <dimen name="confTitleTxtSizeNarrow">17dp</dimen>
+    <dimen name="boxTitleTxtSizeNarrow">16dp</dimen>
+    <dimen name="boxValueTxtSizeNarrow">18dp</dimen>
+    
+    
+    <dimen name="confWidth">300dp</dimen>
+    <dimen name="confTitleTxtSize">20dp</dimen>
+    <dimen name="boxTitleTxtSize">18dp</dimen>
+    <dimen name="boxValueTxtSize">20dp</dimen>
+    <dimen name="configPaddingVert">4dp</dimen>    
+    <dimen name="configPaddingHorz">8dp</dimen>    
+    
+    <dimen name="infoTabPaddingVert">4dp</dimen>
+    <dimen name="infoFooterHeight">65dp</dimen>
+</resources>

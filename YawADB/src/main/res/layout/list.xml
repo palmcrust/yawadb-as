@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/paneBkgr"
+     >
+    
+    <TextView
+        android:id="@+id/status"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+	    android:padding="@dimen/listPadding"
+    	android:textSize="@dimen/listStatTxtSize"
+    	android:textColor="@color/cmd_txt"
+    	android:focusable="true"
+	/>
+    
+    <TextView
+        android:id="@+id/toggleMode"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="4dp"
+	    android:padding="@dimen/listPadding"
+    	android:textSize="@dimen/listActnTxtSize"
+    	android:textColor="@color/cmd_txt"
+    	android:focusable="true"
+	/>
+    
+    <TextView
+        android:id="@+id/actConfig"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="4dp"
+	    android:padding="@dimen/listPadding"
+    	android:text="@string/actConfig"
+    	android:textSize="@dimen/listActnTxtSize"
+    	android:textColor="@color/cmd_txt"
+    	android:background="@color/itemConfigBkgr"
+    	android:focusable="true"
+	/>
+    
+    <TextView
+        android:id="@+id/actInfo"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_marginTop="4dp"
+	    android:padding="@dimen/listPadding"
+    	android:text="@string/actInfo"
+    	android:textSize="@dimen/listActnTxtSize"
+    	android:textColor="@color/cmd_txt"
+    	android:background="@color/itemConfigBkgr"
+    	android:focusable="true"
+	/>
+    
+</LinearLayout>

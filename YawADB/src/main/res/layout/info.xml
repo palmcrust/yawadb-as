@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <FrameLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+   	    android:padding="4sp"
+        android:layout_weight="1">
+        
+        <WebView
+            android:id="@+id/content"
+	        android:layout_width="fill_parent"
+    	    android:layout_height="wrap_content"
+    	    android:background="@android:drawable/alert_dark_frame"
+	    	android:gravity="top"  />
+	</FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/btnGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/infoFooterHeight"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/infoTabPaddingVert"
+        android:paddingBottom="@dimen/infoTabPaddingVert">
+        
+        <RadioButton
+            android:id="@+id/infoHowTo" 
+        	android:layout_width="0dp"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:layout_gravity="center"
+        	android:layout_marginRight="2dp"
+        	android:text="@string/infoHowTo"
+        	android:textColor="@color/cmd_txt"
+        	android:gravity="center"
+        	android:button="@null"
+			android:background="@drawable/info_btn"
+			android:focusable="true"
+		/>
+        
+        <RadioButton
+            android:id="@+id/infoLicense" 
+        	android:layout_width="0dp"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:textColor="@color/cmd_txt"
+        	android:layout_gravity="center"
+        	android:layout_marginLeft="2dp"
+        	android:layout_marginRight="2dp"
+        	android:text="@string/infoLicense"
+        	android:gravity="center"
+        	android:button="@null"
+			android:background="@drawable/info_btn"
+			android:focusable="true"
+		/>
+        
+        <FrameLayout
+        	android:layout_width="0dp"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:layout_marginLeft="2dp">
+            
+        	<LinearLayout
+        		android:layout_width="fill_parent"
+        		android:layout_height="wrap_content"
+        		android:layout_gravity="center_vertical"
+        		android:orientation="vertical"
+			>
+            	<TextView
+			    	android:id="@+id/infoVersion"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center_horizontal"
+					android:text="@string/infoVersion"
+				/>			            
+        	    
+        	    <ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+	        		android:layout_marginTop="2dp"
+					android:layout_gravity="center_horizontal"
+					android:src="@drawable/dev_logo"
+					android:scaleType="fitCenter"
+				/>			            
+            </LinearLayout>    
+        </FrameLayout>
+        
+    </RadioGroup>
+    
+    
+
+</LinearLayout>
