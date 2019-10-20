@@ -1,0 +1,10 @@
+# Referenced at E:\Workspaces\AndroidStudio\YawADB\YawADB\build\intermediates\merged_manifests\release\AndroidManifest.xml:53
+-keep class com.palmcrust.yawadb.ConfigActivity { <init>(); }
+# Referenced at E:\Workspaces\AndroidStudio\YawADB\YawADB\build\intermediates\merged_manifests\release\AndroidManifest.xml:56
+-keep class com.palmcrust.yawadb.InfoActivity { <init>(); }
+# Referenced at E:\Workspaces\AndroidStudio\YawADB\YawADB\build\intermediates\merged_manifests\release\AndroidManifest.xml:44
+-keep class com.palmcrust.yawadb.PopupActivity { <init>(); }
+# Referenced at E:\Workspaces\AndroidStudio\YawADB\YawADB\build\intermediates\merged_manifests\release\AndroidManifest.xml:32
+-keep class com.palmcrust.yawadb.YawAdbProvider { <init>(); }
+# Referenced at E:\Workspaces\AndroidStudio\YawADB\YawADB\build\intermediates\merged_manifests\release\AndroidManifest.xml:77
+-keep class com.palmcrust.yawadb.YawAdbService { <init>(); }

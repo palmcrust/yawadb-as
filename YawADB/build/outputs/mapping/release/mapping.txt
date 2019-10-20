@@ -1,0 +1,318 @@
+# compiler: R8
+# compiler_version: 1.5.68
+# min_api: 1
+# pg_map_id: 5e1a13a
+com.palmcrust.yawadb.AdbModeChanger -> a.a.a.a:
+    android.content.Context context -> a
+    int port -> e
+    java.lang.String shellPath -> c
+    boolean explicit -> b
+    com.palmcrust.yawadb.AdbModeChanger$ThreadHandler handler -> d
+    1:1:void processOptions(boolean):0:0 -> <init>
+    1:1:void <init>(android.content.Context,boolean,boolean):0 -> <init>
+    2:2:java.lang.String com.palmcrust.yawadb.YawAdbOptions$TextOption.getString():0:0 -> <init>
+    2:2:void processOptions(boolean):0 -> <init>
+    2:2:void <init>(android.content.Context,boolean,boolean):0 -> <init>
+    3:3:void processOptions(boolean):0:0 -> <init>
+    3:3:void <init>(android.content.Context,boolean,boolean):0 -> <init>
+com.palmcrust.yawadb.AdbModeChanger$ThreadHandler -> a.a.a.a$a:
+    android.content.Context context -> a
+com.palmcrust.yawadb.ConfigActivity -> com.palmcrust.yawadb.ConfigActivity:
+    com.palmcrust.yawadb.YawAdbOptions options -> b
+    android.view.View$OnFocusChangeListener editTextFocusListener -> f
+    boolean oldAutoUsb -> e
+    int oldPort -> d
+    boolean asWidget -> c
+    android.view.View$OnClickListener resetClickListener -> h
+    android.content.res.Resources rsrc -> a
+    android.view.View$OnClickListener choiceClickListener -> g
+    1:1:int com.palmcrust.yawadb.YawAdbOptions$Option.getBoxId():0:0 -> a
+    1:1:void populateFields():0 -> a
+    2:2:void populateFields():0:0 -> a
+    3:3:int com.palmcrust.yawadb.YawAdbOptions$Option.getNamResId():0:0 -> a
+    3:3:void populateFields():0 -> a
+    4:4:void populateFields():0:0 -> a
+    5:5:void setInputTypeNumberBase(android.widget.TextView):0:0 -> a
+    5:5:void populateFields():0 -> a
+    6:6:void populateFields():0:0 -> a
+    7:7:java.lang.Object com.palmcrust.yawadb.YawAdbOptions$Option.getDefaultValue():0:0 -> a
+    7:7:void populateFields():0 -> a
+    8:8:void populateFields():0:0 -> a
+    1:1:boolean applyChanges():0:0 -> onKeyDown
+    1:1:boolean onKeyDown(int,android.view.KeyEvent):0 -> onKeyDown
+    2:2:int com.palmcrust.yawadb.YawAdbOptions$Option.getErrorMessageId():0:0 -> onKeyDown
+    2:2:boolean applyChanges():0 -> onKeyDown
+    2:2:boolean onKeyDown(int,android.view.KeyEvent):0 -> onKeyDown
+    3:3:boolean applyChanges():0:0 -> onKeyDown
+    3:3:boolean onKeyDown(int,android.view.KeyEvent):0 -> onKeyDown
+    4:4:boolean onKeyDown(int,android.view.KeyEvent):0:0 -> onKeyDown
+com.palmcrust.yawadb.ConfigActivity$1 -> com.palmcrust.yawadb.ConfigActivity$a:
+    1:1:java.lang.Object com.palmcrust.yawadb.YawAdbOptions$Option.getDefaultValue():0:0 -> onFocusChange
+    1:1:void onFocusChange(android.view.View,boolean):0 -> onFocusChange
+    2:2:void onFocusChange(android.view.View,boolean):0:0 -> onFocusChange
+com.palmcrust.yawadb.ConfigActivity$2 -> com.palmcrust.yawadb.ConfigActivity$b:
+    com.palmcrust.yawadb.ConfigActivity this$0 -> a
+    1:1:android.view.View$OnFocusChangeListener com.palmcrust.yawadb.ConfigActivity.access$000(com.palmcrust.yawadb.ConfigActivity):0:0 -> onClick
+    1:1:void onClick(android.view.View):0 -> onClick
+    2:2:void onClick(android.view.View):0:0 -> onClick
+    3:3:void com.palmcrust.yawadb.YawAdbOptions$AlternativesOption.nextValue():0:0 -> onClick
+    3:3:void onClick(android.view.View):0 -> onClick
+    4:4:void onClick(android.view.View):0:0 -> onClick
+    5:5:android.content.res.Resources com.palmcrust.yawadb.ConfigActivity.access$100(com.palmcrust.yawadb.ConfigActivity):0:0 -> onClick
+    5:5:void onClick(android.view.View):0 -> onClick
+    6:6:void onClick(android.view.View):0:0 -> onClick
+com.palmcrust.yawadb.ConfigActivity$3 -> com.palmcrust.yawadb.ConfigActivity$c:
+    com.palmcrust.yawadb.ConfigActivity this$0 -> a
+    1:1:void com.palmcrust.yawadb.ConfigActivity.resetValues():0:0 -> onClick
+    1:1:void com.palmcrust.yawadb.ConfigActivity.access$200(com.palmcrust.yawadb.ConfigActivity):0 -> onClick
+    1:1:void onClick(android.view.View):0 -> onClick
+com.palmcrust.yawadb.ConfigActivity$4 -> a.a.a.b:
+    java.lang.CharSequence replacement -> c
+    int to -> b
+    int from -> a
+com.palmcrust.yawadb.InfoActivity -> com.palmcrust.yawadb.InfoActivity:
+    android.widget.RadioGroup$OnCheckedChangeListener groupCheckListener -> c
+    android.webkit.WebView wView -> b
+    android.content.res.Resources rsrc -> a
+    1:1:void processTabKey():0:0 -> dispatchKeyEvent
+    1:1:boolean dispatchKeyEvent(android.view.KeyEvent):0 -> dispatchKeyEvent
+    2:2:boolean dispatchKeyEvent(android.view.KeyEvent):0:0 -> dispatchKeyEvent
+com.palmcrust.yawadb.InfoActivity$1 -> com.palmcrust.yawadb.InfoActivity$a:
+    com.palmcrust.yawadb.InfoActivity this$0 -> a
+    1:1:android.content.res.Resources com.palmcrust.yawadb.InfoActivity.access$000(com.palmcrust.yawadb.InfoActivity):0:0 -> onFocusChange
+    1:1:void onFocusChange(android.view.View,boolean):0 -> onFocusChange
+    2:2:void onFocusChange(android.view.View,boolean):0:0 -> onFocusChange
+com.palmcrust.yawadb.InfoActivity$2 -> com.palmcrust.yawadb.InfoActivity$b:
+    com.palmcrust.yawadb.InfoActivity this$0 -> a
+    1:1:android.content.res.Resources com.palmcrust.yawadb.InfoActivity.access$000(com.palmcrust.yawadb.InfoActivity):0:0 -> onCheckedChanged
+    1:1:void onCheckedChanged(android.widget.RadioGroup,int):0 -> onCheckedChanged
+    2:2:void onCheckedChanged(android.widget.RadioGroup,int):0:0 -> onCheckedChanged
+    3:3:android.webkit.WebView com.palmcrust.yawadb.InfoActivity.access$100(com.palmcrust.yawadb.InfoActivity):0:0 -> onCheckedChanged
+    3:3:void onCheckedChanged(android.widget.RadioGroup,int):0 -> onCheckedChanged
+    4:4:void onCheckedChanged(android.widget.RadioGroup,int):0:0 -> onCheckedChanged
+com.palmcrust.yawadb.PopupActivity -> com.palmcrust.yawadb.PopupActivity:
+    com.palmcrust.yawadb.StatusAnalyzer analyzer -> f
+    java.lang.Thread adbThread -> d
+    android.content.BroadcastReceiver bcastReceiver -> e
+    java.util.Timer timer -> a
+    boolean asWidget -> c
+    java.util.TimerTask ttask -> b
+    android.view.View$OnClickListener clickListener -> g
+    void access$000(com.palmcrust.yawadb.PopupActivity) -> a
+    void access$200(com.palmcrust.yawadb.PopupActivity,boolean,boolean) -> a
+    void changeAdbConnection(boolean,boolean) -> a
+    1:1:com.palmcrust.yawadb.StatusAnalyzer$Status com.palmcrust.yawadb.StatusAnalyzer.getStatus():0:0 -> a
+    1:1:void refreshText():0 -> a
+    2:2:void refreshText():0:0 -> a
+    3:3:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.evaluateADBConnectString():0:0 -> a
+    3:3:void refreshText():0 -> a
+    4:4:void refreshText():0:0 -> a
+    void access$100(com.palmcrust.yawadb.PopupActivity) -> b
+    void startConfigActivity() -> b
+    void access$300(com.palmcrust.yawadb.PopupActivity) -> c
+    void startInfoActivity() -> c
+    void access$400(com.palmcrust.yawadb.PopupActivity) -> d
+    void terminate() -> d
+    1:1:com.palmcrust.yawadb.StatusAnalyzer$Status com.palmcrust.yawadb.StatusAnalyzer.getStatus():0:0 -> onActivityResult
+    1:1:void onActivityResult(int,int,android.content.Intent):0 -> onActivityResult
+    2:2:void onActivityResult(int,int,android.content.Intent):0:0 -> onActivityResult
+com.palmcrust.yawadb.PopupActivity$1 -> com.palmcrust.yawadb.PopupActivity$a:
+    com.palmcrust.yawadb.PopupActivity this$0 -> a
+com.palmcrust.yawadb.PopupActivity$PopupActivityBroadcastReceiver -> com.palmcrust.yawadb.PopupActivity$b:
+    com.palmcrust.yawadb.PopupActivity activity -> a
+    1:1:boolean com.palmcrust.yawadb.PopupActivity.access$500(com.palmcrust.yawadb.PopupActivity):0:0 -> onReceive
+    1:1:void onReceive(android.content.Context,android.content.Intent):0 -> onReceive
+    2:2:void onReceive(android.content.Context,android.content.Intent):0:0 -> onReceive
+    3:3:com.palmcrust.yawadb.StatusAnalyzer com.palmcrust.yawadb.PopupActivity.access$600(com.palmcrust.yawadb.PopupActivity):0:0 -> onReceive
+    3:3:void onReceive(android.content.Context,android.content.Intent):0 -> onReceive
+    4:4:com.palmcrust.yawadb.StatusAnalyzer$Status com.palmcrust.yawadb.StatusAnalyzer.getStatus():0:0 -> onReceive
+    4:4:void onReceive(android.content.Context,android.content.Intent):0 -> onReceive
+    5:5:void onReceive(android.content.Context,android.content.Intent):0:0 -> onReceive
+com.palmcrust.yawadb.PopupActivity$PopupActivityBroadcastReceiver$1 -> com.palmcrust.yawadb.PopupActivity$b$a:
+    com.palmcrust.yawadb.PopupActivity$PopupActivityBroadcastReceiver this$0 -> a
+com.palmcrust.yawadb.PopupActivity$PopupActivityTimerTask -> com.palmcrust.yawadb.PopupActivity$c:
+    com.palmcrust.yawadb.PopupActivity this$0 -> a
+com.palmcrust.yawadb.StatusAnalyzer -> a.a.a.c:
+    android.content.Context context -> a
+    com.palmcrust.yawadb.StatusAnalyzer$Status curStatus -> c
+    int portNumber -> e
+    com.palmcrust.yawadb.StatusAnalyzer$AnalyzerThread anThread -> b
+    java.lang.String ipAddress -> d
+    1:1:void <init>(android.content.Context):0:0 -> <init>
+    1:1:void <init>(android.content.Context,com.palmcrust.yawadb.StatusAnalyzer):0 -> <init>
+    2:2:void <init>(android.content.Context,com.palmcrust.yawadb.StatusAnalyzer):0:0 -> <init>
+    boolean analyze() -> a
+    void interrupt() -> b
+    boolean isWirelessActive() -> c
+com.palmcrust.yawadb.StatusAnalyzer$AnalyzerThread -> a.a.a.c$a:
+    com.palmcrust.yawadb.StatusAnalyzer this$0 -> a
+    1:1:com.palmcrust.yawadb.StatusAnalyzer$Status com.palmcrust.yawadb.StatusAnalyzer.access$002(com.palmcrust.yawadb.StatusAnalyzer,com.palmcrust.yawadb.StatusAnalyzer$Status):0:0 -> run
+    1:1:void run():0 -> run
+    2:2:java.lang.String com.palmcrust.yawadb.Utils.getProp(java.lang.String):0:0 -> run
+    2:2:void run():0 -> run
+    3:3:void run():0:0 -> run
+    4:4:int com.palmcrust.yawadb.StatusAnalyzer.access$102(com.palmcrust.yawadb.StatusAnalyzer,int):0:0 -> run
+    4:4:void run():0 -> run
+    5:5:boolean com.palmcrust.yawadb.Utils.isEmpty(java.lang.String):0:0 -> run
+    5:5:void run():0 -> run
+    6:6:void run():0:0 -> run
+    7:7:int com.palmcrust.yawadb.StatusAnalyzer.access$102(com.palmcrust.yawadb.StatusAnalyzer,int):0:0 -> run
+    7:7:void run():0 -> run
+    8:8:void run():0:0 -> run
+    9:9:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.ipAddressFromWifiManager():0:0 -> run
+    9:9:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.access$300(com.palmcrust.yawadb.StatusAnalyzer):0 -> run
+    9:9:void run():0 -> run
+    10:10:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.ipAddrToString(int):0:0 -> run
+    10:10:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.ipAddressFromWifiManager():0 -> run
+    10:10:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.access$300(com.palmcrust.yawadb.StatusAnalyzer):0 -> run
+    10:10:void run():0 -> run
+    11:11:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.access$202(com.palmcrust.yawadb.StatusAnalyzer,java.lang.String):0:0 -> run
+    11:11:void run():0 -> run
+    12:12:void run():0:0 -> run
+    13:13:java.lang.String com.palmcrust.yawadb.StatusAnalyzer.access$200(com.palmcrust.yawadb.StatusAnalyzer):0:0 -> run
+    13:13:void run():0 -> run
+    14:14:void run():0:0 -> run
+    15:15:int com.palmcrust.yawadb.StatusAnalyzer.access$100(com.palmcrust.yawadb.StatusAnalyzer):0:0 -> run
+    15:15:void run():0 -> run
+    16:16:void run():0:0 -> run
+    17:17:com.palmcrust.yawadb.StatusAnalyzer$Status com.palmcrust.yawadb.StatusAnalyzer.access$002(com.palmcrust.yawadb.StatusAnalyzer,com.palmcrust.yawadb.StatusAnalyzer$Status):0:0 -> run
+    17:17:void run():0 -> run
+com.palmcrust.yawadb.StatusAnalyzer$Status -> a.a.a.c$b:
+    com.palmcrust.yawadb.StatusAnalyzer$Status UP -> b
+    com.palmcrust.yawadb.StatusAnalyzer$Status UNDEFINED -> a
+    com.palmcrust.yawadb.StatusAnalyzer$Status[] $VALUES -> f
+    com.palmcrust.yawadb.StatusAnalyzer$Status NO_NETWORK -> d
+    com.palmcrust.yawadb.StatusAnalyzer$Status DOWN -> c
+    com.palmcrust.yawadb.StatusAnalyzer$Status NO_ADBD -> e
+com.palmcrust.yawadb.Utils -> a.a.a.d:
+    int APIVersion -> a
+    1:1:int evaluateAPIVersion():0:0 -> <clinit>
+    1:1:void <clinit>():0 -> <clinit>
+    2:2:void <clinit>():0:0 -> <clinit>
+    1:1:java.lang.Process runCommand(java.lang.String[]):0:0 -> a
+    1:1:boolean isAdbdRunning():0 -> a
+    2:2:boolean isAdbdRunning():0:0 -> a
+    boolean isEmpty(java.lang.String) -> a
+    boolean isExecutable(java.io.File) -> a
+    boolean runBatchSequence(java.lang.String,java.lang.String[]) -> a
+    java.lang.Process runCommand(java.lang.String[]) -> a
+    void showTooltip(android.content.Context,int,int) -> a
+    void showTooltip(android.content.Context,java.lang.String,int) -> a
+    android.content.ComponentName startService(android.content.Context,android.content.Intent) -> a
+com.palmcrust.yawadb.YawAdbOptions -> a.a.a.e:
+    com.palmcrust.yawadb.YawAdbOptions$AlternativesOption adbdRestartMethod -> e
+    int[] autoRefrStringIds -> h
+    com.palmcrust.yawadb.YawAdbOptions$AlternativesOption autoRefresh -> b
+    int[] autoOffStringIds -> i
+    com.palmcrust.yawadb.YawAdbOptions$AlternativesOption autoUsb -> c
+    byte[] signature -> l
+    com.palmcrust.yawadb.YawAdbOptions$PathOption shellPath -> d
+    int[] refrIntervals -> j
+    int[] adbRestartStringIds -> k
+    com.palmcrust.yawadb.YawAdbOptions$Option[] allOptions -> f
+    android.content.Context context -> g
+    com.palmcrust.yawadb.YawAdbOptions$IntegerOption portNumber -> a
+    1:1:void loadPreferences():0:0 -> <init>
+    1:1:void <init>(android.content.Context):0 -> <init>
+    boolean getAutoUsbValue() -> a
+    1:1:java.lang.String com.palmcrust.yawadb.YawAdbOptions$Option.getKey():0:0 -> b
+    1:1:void savePreferences():0 -> b
+    2:2:void savePreferences():0:0 -> b
+    3:3:java.lang.Object com.palmcrust.yawadb.YawAdbOptions$Option.getValue():0:0 -> b
+    3:3:void savePreferences():0 -> b
+    4:4:void savePreferences():0:0 -> b
+com.palmcrust.yawadb.YawAdbOptions$1 -> a.a.a.e$a:
+com.palmcrust.yawadb.YawAdbOptions$AlternativesOption -> a.a.a.e$b:
+    int[] choiceResIds -> g
+    java.lang.String getStringValue(android.content.res.Resources) -> a
+    boolean validateValue(java.lang.Object) -> b
+    int getIndex() -> d
+com.palmcrust.yawadb.YawAdbOptions$IntegerOption -> a.a.a.e$c:
+    int maxValue -> h
+    int minValue -> g
+    boolean validateValue(java.lang.Object) -> b
+    int getIntValue() -> d
+com.palmcrust.yawadb.YawAdbOptions$Option -> a.a.a.e$d:
+    java.lang.Object defaultValue -> f
+    java.lang.Object curValue -> e
+    java.lang.String key -> a
+    int errMsgId -> d
+    int boxId -> b
+    int nameResId -> c
+    1:1:void <init>(java.lang.String,int,int,int,java.lang.Object):0:0 -> <init>
+    1:1:void <init>(java.lang.String,int,int,int,java.lang.Object,com.palmcrust.yawadb.YawAdbOptions$1):0 -> <init>
+    int getBoxId() -> a
+    java.lang.String getStringValue(android.content.res.Resources) -> a
+    boolean setValue(java.lang.Object) -> a
+    java.lang.String getKey() -> b
+    boolean validateValue(java.lang.Object) -> b
+    boolean setDefaultValue() -> c
+com.palmcrust.yawadb.YawAdbOptions$PathOption -> a.a.a.e$e:
+    1:1:boolean com.palmcrust.yawadb.Utils.validateExecPath(java.lang.String):0:0 -> b
+    1:1:boolean validateValue(java.lang.Object):0 -> b
+com.palmcrust.yawadb.YawAdbOptions$TextOption -> a.a.a.e$f:
+    boolean setValue(java.lang.Object) -> a
+com.palmcrust.yawadb.YawAdbProvider -> com.palmcrust.yawadb.YawAdbProvider:
+    android.content.Intent serviceIntent -> a
+com.palmcrust.yawadb.YawAdbService -> com.palmcrust.yawadb.YawAdbService:
+    com.palmcrust.yawadb.AdbModeChanger modeChanger -> j
+    android.app.PendingIntent onClickIntent -> i
+    android.content.ComponentName providerCompName -> c
+    android.widget.RemoteViews views -> b
+    int refrInterval -> h
+    com.palmcrust.yawadb.YawAdbService$AutoRefreshThread refrThread -> a
+    int oldImageResId -> f
+    boolean autoUsb -> g
+    android.appwidget.AppWidgetManager appWidgetManager -> d
+    com.palmcrust.yawadb.StatusAnalyzer analyzer -> k
+    com.palmcrust.yawadb.YawAdbService$WidgetServiceBroadcastReceiver bcastReceiver -> e
+    void access$100(com.palmcrust.yawadb.YawAdbService,boolean) -> a
+    void access$200(com.palmcrust.yawadb.YawAdbService) -> a
+    void handleStartCommand(android.content.Intent) -> a
+    1:1:boolean updateStatus(boolean):0:0 -> a
+    1:1:void processOptions(boolean):0 -> a
+    2:2:int com.palmcrust.yawadb.YawAdbOptions.getRefreshInterval():0:0 -> a
+    2:2:void processOptions(boolean):0 -> a
+    3:3:void processOptions(boolean):0:0 -> a
+    void setIntentOnClickListener() -> a
+    1:1:boolean updateStatus(boolean):0:0 -> b
+    1:1:boolean access$300(com.palmcrust.yawadb.YawAdbService,boolean):0 -> b
+    2:2:com.palmcrust.yawadb.StatusAnalyzer$Status com.palmcrust.yawadb.StatusAnalyzer.getStatus():0:0 -> b
+    2:2:void refreshStatus(boolean):0 -> b
+    3:3:void refreshStatus(boolean):0:0 -> b
+    void startAutoRefreshIfRequested() -> b
+    void access$700(com.palmcrust.yawadb.YawAdbService,boolean) -> c
+    void startPopupActivity() -> c
+    1:1:void com.palmcrust.yawadb.YawAdbService$AutoRefreshThread.terminate():0:0 -> d
+    1:1:void terminateAutoRefresh():0 -> d
+    2:2:void terminateAutoRefresh():0:0 -> d
+    1:1:void com.palmcrust.yawadb.ForegroundServiceStarter.start():0:0 -> onCreate
+    1:1:void onCreate():0 -> onCreate
+    1:1:void com.palmcrust.yawadb.YawAdbService$AutoRefreshThread.terminate():0:0 -> onDestroy
+    1:1:void onDestroy():0 -> onDestroy
+    2:2:void onDestroy():0:0 -> onDestroy
+com.palmcrust.yawadb.YawAdbService$1 -> com.palmcrust.yawadb.YawAdbService$a:
+    com.palmcrust.yawadb.YawAdbService this$0 -> a
+    1:1:void com.palmcrust.yawadb.YawAdbService.startAdbModeChanger():0:0 -> run
+    1:1:void com.palmcrust.yawadb.YawAdbService.access$000(com.palmcrust.yawadb.YawAdbService):0 -> run
+    1:1:void run():0 -> run
+com.palmcrust.yawadb.YawAdbService$AutoRefreshThread -> com.palmcrust.yawadb.YawAdbService$b:
+    com.palmcrust.yawadb.StatusAnalyzer analyzer -> d
+    boolean force -> b
+    int sleepTimeout -> c
+    com.palmcrust.yawadb.YawAdbService$WidgetServiceMessageHandler handler -> a
+    1:1:com.palmcrust.yawadb.StatusAnalyzer com.palmcrust.yawadb.YawAdbService.access$800(com.palmcrust.yawadb.YawAdbService):0:0 -> <init>
+    1:1:void <init>(com.palmcrust.yawadb.YawAdbService,int):0 -> <init>
+    2:2:void <init>(com.palmcrust.yawadb.YawAdbService,int):0:0 -> <init>
+com.palmcrust.yawadb.YawAdbService$WidgetServiceBroadcastReceiver -> com.palmcrust.yawadb.YawAdbService$c:
+    com.palmcrust.yawadb.YawAdbService service -> a
+    1:1:void com.palmcrust.yawadb.YawAdbService.access$400(com.palmcrust.yawadb.YawAdbService):0:0 -> onReceive
+    1:1:void onReceive(android.content.Context,android.content.Intent):0 -> onReceive
+    2:2:void onReceive(android.content.Context,android.content.Intent):0:0 -> onReceive
+    3:3:void com.palmcrust.yawadb.YawAdbService.access$500(com.palmcrust.yawadb.YawAdbService):0:0 -> onReceive
+    3:3:void onReceive(android.content.Context,android.content.Intent):0 -> onReceive
+    4:4:void onReceive(android.content.Context,android.content.Intent):0:0 -> onReceive
+    5:5:void com.palmcrust.yawadb.YawAdbService.access$600(com.palmcrust.yawadb.YawAdbService):0:0 -> onReceive
+    5:5:void onReceive(android.content.Context,android.content.Intent):0 -> onReceive
+com.palmcrust.yawadb.YawAdbService$WidgetServiceMessageHandler -> com.palmcrust.yawadb.YawAdbService$d:
+    com.palmcrust.yawadb.YawAdbService service -> a
