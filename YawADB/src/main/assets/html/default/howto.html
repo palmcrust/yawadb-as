@@ -82,8 +82,9 @@ For that reason using a rooted device is certainly a preferred option.</p>
      
 <p><b><u>ADBD restart</u></b>. In order to accept the new mode, ADB daemon should be restarted. In <i>normal</i>
 mode (default) the daemon is stopped using <tt>stop adbd</tt> command, which may fail, if the daemon is busy or stalled.
-In <i>forced</i> mode the daemon is terminated by sending SIGKILL to its PID. It almost guarantees the daemon to
-stop, but precludes it from performing clean-up. Use it with care.</p>      
+In <i>forced</i> mode the daemon is terminated by sending SIGKILL to its PID.
+ This precludes the daemon from performing clean-up and should be used with care.
+ With Android 5.0+ the PID is not guaranteed to be established, in which case  <i>forced</i> works like <i>normal</i>. </p>
     
 <h2>Troubleshooting</h2>
 
