@@ -58,7 +58,7 @@ public class InfoActivity extends Activity {
 			@Override
 			public void onFocusChange(View v, boolean hasFocus) {
 				((View)v.getParent()).setBackgroundColor(
-					rsrc.getColor(hasFocus ? R.color.strokeCrnt : R.color.strokeOther));
+					Utils.getColour(rsrc, hasFocus ? R.color.strokeCrnt : R.color.strokeOther));
 			}
 		});
 

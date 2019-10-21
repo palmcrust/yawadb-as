@@ -28,6 +28,8 @@ import java.io.InputStreamReader;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.widget.Toast;
 
 class Utils {
@@ -49,34 +51,44 @@ class Utils {
 		return result;
 	}
 
-	
-//	static int getAdbdPid() {
-//		 Process p = runCommand("ps"); // , "/sbin/adbd");
-//		 if (p==null) return -1;
-//		 try {
-//			 p.waitFor();
-//		 } catch (InterruptedException ex) {
-//		 	return -10;
-//		 }
-//		 BufferedReader rd = new BufferedReader(new InputStreamReader(p.getInputStream()));
-//		 try {
-//			 String line;
-//			 while((line=rd.readLine())!=null) {
-//			 	System.out.println(line);
-//				 if (line.contains("/adbd")) {
-//					 String[] tokens = line.split("[ \\t]+");
-//					 if (tokens.length >= 2)
-//						 return Integer.parseInt(tokens[1]);
-//				 }
-//			 }
-//			 return -1;
-//		 } catch(Exception ex) {
-//			 ex.printStackTrace();
-//			 return -2;
-//		 } finally {
-//			 try { rd.close();} catch(IOException ignored) {}
-//		 }
-//	}
+	private static final String[] AdbdPatterns = {"adbd", "sbin/adbd"};
+
+
+	static int getAdbdPid() {
+		for (String pattern : AdbdPatterns) {
+			int pid = getAppPid(pattern);
+			if (pid >= 0) return pid;
+		}
+		return -1;
+	}
+
+	private static int getAppPid(String pattern) {
+		 Process p = runCommand("ps", pattern);
+		 if (p==null) return -1;
+		 try {
+			 p.waitFor();
+		 } catch (InterruptedException ex) {
+		 	return -10;
+		 }
+		 BufferedReader rd = new BufferedReader(new InputStreamReader(p.getInputStream()));
+		 try {
+			 String line;
+			 while((line=rd.readLine())!=null) {
+			 	System.out.println(line);
+				 if (line.contains("/adbd")) {
+					 String[] tokens = line.split("[ \\t]+");
+					 if (tokens.length >= 2)
+						 return Integer.parseInt(tokens[1]);
+				 }
+			 }
+			 return -1;
+		 } catch(Exception ex) {
+			 ex.printStackTrace();
+			 return -2;
+		 } finally {
+			 try { rd.close();} catch(IOException ignored) {}
+		 }
+	}
 
 	static boolean isEmpty(String str) {
 		return (str==null) || (str.length() <= 0);
@@ -167,6 +179,22 @@ class Utils {
 		}
 		
 	}
+
+	static int getColour(Resources rsrc, int colourId) {
+		Class<Resources> rsrcClass = Resources.class;
+		try {
+			return (Integer) rsrcClass.getMethod("getColor", int.class, Resources.Theme.class).invoke(rsrc, colourId, null);
+		} catch (Exception ex1) {
+			try {
+				return (Integer) rsrcClass.getMethod("getColor", int.class).invoke(rsrc, colourId);
+			} catch (Exception ex2) {
+				return Color.TRANSPARENT;
+			}
+		}
+
+
+	}
+
 
 	//=============================================================================================
 	static ComponentName startService(Context appContext, Intent intent) {

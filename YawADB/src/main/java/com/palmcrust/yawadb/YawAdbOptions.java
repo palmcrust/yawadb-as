@@ -265,7 +265,7 @@ class YawAdbOptions {
 					new GZIPInputStream(
 						context.openFileInput(SavedOptionsFileName)));
 			byte[] sgn = new byte[2];
-			if (ois.read(sgn) <= 2) throw new EOFException();
+			if (ois.read(sgn) < 2) throw new EOFException();
 			if (!Arrays.equals(sgn, signature))
 				throw new IllegalStateException ("Wrong signature");
 			//sgn = null;
@@ -279,7 +279,9 @@ class YawAdbOptions {
 			
 		} catch (FileNotFoundException ignored) {
 		} catch (EOFException ignored) {
-		} catch (Exception ex) { ex.printStackTrace(); }
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 			
 		if (ois != null)
 			try {ois.close();} catch (IOException ignored) {}
@@ -322,7 +324,9 @@ class YawAdbOptions {
 				oos.writeObject(opt.getValue());
 			}
 			
-		} catch (Exception ex) { ex.printStackTrace(); }
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
 			
 		if (oos != null)
 			try {oos.close();} catch (IOException ignored) {}

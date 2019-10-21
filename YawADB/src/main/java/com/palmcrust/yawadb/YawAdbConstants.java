@@ -21,6 +21,8 @@ package com.palmcrust.yawadb;
 
 
 class YawAdbConstants {
+	static final String ConnectivityAction = "android.net.conn.CONNECTIVITY_CHANGE"; // ConnectivityManager.CONNECTIVITY_ACTION
+
 	static final String AsWidgetExtra = "com.palmcrust.yawadb.extra.FromWidget";
 	static final String StatusAnalyzerExtra = "com.palmcrust.yawadb.extra.StatusAnalyzer";
 	static final String ComponentNameExtra = "com.palmcrust.yawadb.extra.ComponentName";

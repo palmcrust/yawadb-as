@@ -4,6 +4,7 @@ gradlew
 gradlew.bat
 /local.properties
 /keystore.properties
+/.idea/caches
 /.idea/workspace.xml
 /.idea/libraries
 /.idea/caches

@@ -69,10 +69,8 @@ class AdbModeChanger extends Thread {
 	public void run() {
 		String[] cmd = new String[3];
 		cmd[0] = "setprop service.adb.tcp.port " + port;
-//		int pid = 0;
-//		if (forceKill) pid = Utils.getAdbdPid();
-//		cmd[1] = (pid <= 0) ? "stop adbd" : ("kill -9 " + pid);
-		cmd[1] = "stop adbd";
+		int pid = forceKill ? Utils.getAdbdPid(): -2;
+		cmd[1] = (pid < 0) ? "stop adbd" : ("kill -9 " + pid);
 		cmd[2] = "start adbd";
 		
 		try {

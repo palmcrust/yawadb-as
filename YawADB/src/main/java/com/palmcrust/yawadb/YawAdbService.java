@@ -83,7 +83,7 @@ public class YawAdbService extends Service {
 	private PendingIntent onClickIntent;
 	private AdbModeChanger modeChanger;
 	private StatusAnalyzer analyzer;
-
+	private Object connectivityActionReplacement;
 	
 	private static final String LogTag = "YawADB";
 	private static final String MsgNullIntent=" Null intent at \'%s\'! Ignoring the call";
@@ -99,6 +99,7 @@ public class YawAdbService extends Service {
 
 
 	@Override
+	@SuppressWarnings("deprecation")
 	public void onStart(Intent intent, int startId) {
 		if (intent==null)
 			Log.i(LogTag, String.format(MsgNullIntent, "onStart"));
@@ -142,8 +143,15 @@ public class YawAdbService extends Service {
 		filter.addAction(YawAdbConstants.PopupAction);
 		filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED); 
 		filter.addAction(Intent.ACTION_SCREEN_ON); 
-		filter.addAction(Intent.ACTION_SCREEN_OFF); 
-		filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+		filter.addAction(Intent.ACTION_SCREEN_OFF);
+
+		if (Utils.APIVersion >= 21) {
+			ConnectivityActionReplacement caReplacement = new ConnectivityActionReplacement(this, bcastReceiver);
+			caReplacement.connect();
+			connectivityActionReplacement = caReplacement;
+		} else
+			filter.addAction(YawAdbConstants.ConnectivityAction);
+
 		getApplicationContext().registerReceiver(bcastReceiver, filter);
 
 		setIntentOnClickListener();
@@ -165,6 +173,10 @@ public class YawAdbService extends Service {
 
 	@Override
 	public void onDestroy() {
+		if (connectivityActionReplacement != null) {
+			((ConnectivityActionReplacement)connectivityActionReplacement).disconnect();
+			connectivityActionReplacement = null;
+		}
 		
 		if (bcastReceiver != null) {
 			getApplicationContext().unregisterReceiver(bcastReceiver);

@@ -22,6 +22,7 @@ package com.palmcrust.yawadb;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -29,6 +30,9 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.net.ConnectivityManager;
+import android.net.Network;
+import android.net.NetworkCapabilities;
+import android.net.NetworkRequest;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.KeyEvent;
@@ -49,6 +53,9 @@ public class PopupActivity extends Activity  {
 	private Thread adbThread;
 	private BroadcastReceiver bcastReceiver;
 	private StatusAnalyzer analyzer;
+    private Object connectivityActionReplacement;
+
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,13 +76,21 @@ public class PopupActivity extends Activity  {
 		
 		timer = new Timer();
 		
-		refreshText(); 
+		refreshText();
+
 
 		bcastReceiver= new PopupActivityBroadcastReceiver(this);
 		IntentFilter filter = new IntentFilter();
 		filter.addAction(YawAdbConstants.AdbModeChangedAction);
-		filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED); 
-		filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+		filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+
+        if (Utils.APIVersion >= 21) {
+            ConnectivityActionReplacement caReplacement = new ConnectivityActionReplacement(this, bcastReceiver);
+            caReplacement.connect();
+            connectivityActionReplacement = caReplacement;
+        } else
+            filter.addAction(YawAdbConstants.ConnectivityAction);
+
 		registerReceiver(bcastReceiver, filter);
 		
 
@@ -126,7 +141,7 @@ public class PopupActivity extends Activity  {
 		}
 		
 		tv.setOnClickListener(clickListener);
-		tv.setBackgroundColor(rsrc.getColor(colorResId));
+		tv.setBackgroundColor(Utils.getColour(rsrc, colorResId));
 		
 		tv = findViewById(R.id.toggleMode);
 		if (toggleModeEnabled) {
@@ -144,7 +159,7 @@ public class PopupActivity extends Activity  {
 
 			tv.setTag(tag);
 			tv.setOnClickListener(clickListener);
-			tv.setBackgroundColor(rsrc.getColor(colorResId));
+			tv.setBackgroundColor(Utils.getColour(rsrc, colorResId));
 		} else
 			tv.setVisibility(View.GONE);
 	}
@@ -231,6 +246,11 @@ public class PopupActivity extends Activity  {
 	}
 
 	private void terminate() {
+	    if (connectivityActionReplacement != null) {
+            ((ConnectivityActionReplacement)connectivityActionReplacement).disconnect();
+	        connectivityActionReplacement = null;
+        }
+
 		if (ttask != null) {
 			ttask.cancel();
 			ttask = null;
