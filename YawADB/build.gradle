@@ -17,8 +17,8 @@ android {
 
     defaultConfig {
         applicationId "com.palmcrust.yawadb"
-        versionCode 10400
-        versionName "1.4"
+        versionCode 10401
+        versionName "1.4.1"
         targetSdkVersion 29
     }
 
